@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ccc;
+    /* line-height: 1.4; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    background-color: rgb(190, 183, 183);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem;
+    border: 0;
+    width: 80px;
+    box-shadow: 3px 2px 2px black;
+}
+
+.main-container {
+    display: grid;
+    grid-gap: 20px;
+    /* height: auto;
+    width: 100%; */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px
+}
+
+.main-nav li {
+    background-color: rgb(145, 142, 142);
+    text-align: center;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 2px;
+
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+
+
+}
+
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        'header header topbox-1'
+        ' header header topbox-2';
+
+}
+
+.header {
+    grid-area: header;
+    min-height: 400px;
+    background: url(./bgpic.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: 2px 2px 2px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.header p {
+    font-size: 1rem;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.header a {
+    background-color: rgb(145, 142, 142);
+    color: white;
+    text-decoration: none;
+    border: 0;
+    margin-top: 50px;
+    padding: 0.5rem 1rem;
+    box-shadow: 2px 2px 2px;
+}
+
+.topbox {
+    /* background-color: rgb(155, 148, 148); */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px;
+    padding: 1.5rem;
+}
+
+.topbox-1 .price {
+    font-size: 1.5rem;
+}
+
+.topbox-2 .price {
+    font-size: 1.5rem;
+}
+
+.topbox-1 {
+    grid-area: topbox-1;
+    background-color: rgb(155, 148, 148);
+    text-align: center;
+    box-shadow: 2px 2px 2px;
+}
+
+.topbox-2 {
+    grid-area: topbox-2;
+    background-color: rgb(155, 148, 148);
+    text-align: center;
+    box-shadow: 2px 2px 2px;
+
+}
+
+/* boxes */
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-top: 15px;
+
+
+}
+
+.box {
+    background-color: rgb(155, 148, 148);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 2px 2px 2px;
+}
+
+.info {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    font-size: 20px;
+    margin: 1rem;
+
+
+}
+
+.info img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 300px;
+    box-shadow: 3px 3px 3px black;
+}
+
+/* portfolio */
+.portfolio {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 0.5fr);
+
+
+
+}
+
+.portfolio img {
+    width: 100%;
+    height: 400px;
+    box-shadow: 3px 3px 3px black;
+    margin: 0.5rem 2rem;
+}
+
+footer {
+    margin-top: 2rem;
+    background-color: rgb(145, 142, 142);
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    font-size: 15px;
+
+}
+
+/* media */
+@media (max-width:800px) {
+    .top-container {
+        grid-template-areas:
+            'header header'
+            'topbox-1 topbox-2';
+        grid-gap: 5px;
+        font-size: 11px;
+        padding: 0.2rem;
+    }
+
+    .topbox-1 .price {
+        font-size: 1rem;
+    }
+
+    .topbox-2 .price {
+        font-size: 1rem;
+    }
+
+    .main-nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, 70px);
+        grid-gap: 5px;
+        padding: 0;
+        margin: 10px;
+
+    }
+
+    .btn {
+        padding: 3px;
+        margin-bottom: 10px;
+    }
+
+    .boxes {
+        grid-gap: 5px;
+        display: grid;
+        grid-template-areas:
+            'box box '
+            'box box';
+
+    }
+
+    .box {
+        width: 100%;
+        font-size: 10px;
+        padding: 0;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .box i {
+        font-size: 5px;
+    }
+
+    .info {
+        display: grid;
+        grid-gap: 10px;
+        font-size: 10px;
+        grid-template-areas: repeat(2, 200px);
+    }
+
+    .info img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .portfolio img {
+        width: 100%;
+        height: 100px;
+        padding: 0;
+        margin: 0;
+
+    }
+}
